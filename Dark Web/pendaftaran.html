@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pendaftaran</title>
+        <link rel="website icon" type="jpg" href="image/background6.jpg"></rel>
+        <style>
+
+            body{
+               
+                background-image: url(image/background4.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:cover;
+            }
+            #wrapper-menu{
+                text-align:center;
+            }
+            .menu{
+                display:inline-block;
+                border:3px solid whitesmoke;
+                text-decoration:none ;
+                border-radius:5px;
+                font-size:20px;
+                font-weight: 900;
+                padding:5px;
+                margin-right:8px;
+                background-color:rgb(26, 27, 27);
+                transition: 1.2s;
+                color:rgb(156, 147, 147);
+            }
+            .menu:hover{
+                color:rgb(218, 218, 218);
+            }
+            #card{
+                margin-left:560px;
+                margin-top:62px;
+                height:75dvh;
+                width: 25dvw;
+                background: linear-gradient(to right, orange, rgb(0, 0, 0, 0.3));
+                border-radius:10px;           
+                transition: 1.3s;
+                position:absolute;
+                transform-style:preserve-3d;
+            }
+            #card:hover{
+                transform:rotateY(180deg);
+                background: linear-gradient(to right, orange, rgb(0, 0, 0, 0.9));
+            }
+            #front{
+                height:75dvh;
+                width: 25dvw;
+                border-radius:10px;
+                background-image: url(image/background7.png);
+                background-repeat: no-repeat;
+                background-size:50dvw 50dvh;
+                background-position:50% 50%;
+                position:absolute;
+            }
+            #h1{
+                text-align: center;
+            }
+            #back{
+                position:absolute;
+                height:75dvh;
+                width: 25dvw;
+                border-radius:10px;
+                transform: rotateY(180deg);
+                justify-content: center;
+
+            }
+            #front, #back{
+                backface-visibility: hidden;
+            }
+            h4{
+                text-align:center;
+                font-size:20px;
+                font-weight: 5px;
+            }
+            #format:not(#checkbox){
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; 
+            }
+            .form1{
+                margin-top:3.5px;
+                margin-bottom:5px;
+            }
+            #button{
+                height:2.5rem;
+                width:8rem;
+                border-radius:3rem;
+                border: none;
+                background-color:transparent;
+                box-shadow: 2px 2px 5px rgb(190, 189, 189),-2px -2px 5px rgb(0, 0, 0);
+                font-weight:1000;
+                cursor:pointer;
+                transition-duration:500ms;
+            }
+            #button:active{
+                box-shadow:none;
+                transform:scale(0.9);
+            }
+            
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <nav id="wrapper-menu">
+            <a href="indeks.html" class="menu">HOME</a>
+            <a href="kontak.html" class="menu">KONTAK</a>
+            <a href="pendaftaran.html" class="menu">PENDAFTARAN</a>
+        </nav>
+        <main>
+            <section>
+            <div id="card">
+                <div id="front">
+                    <h1 id="h1">PENDAFTARAN</h1>
+                    
+                </div>
+
+                <div id="back">
+                    <h4>PENDAFTARAN</h4>
+                    <form id="format">
+                        <label for="username" class="form1"><b>USERNAME</b></label> 
+                        <input type="text" id="username" placeholder="Silahkan isi username..." class="form1" required>
+                        <label for="email" class="form1"><b>EMAIL</b></label>
+                        <INPUT type="email" id="email" placeholder="Silahkan isi email..." class="form1" required>
+                        <label for="date" class="form1"><b>DATE</b></label>
+                        <input type="date" id="date" class="form1" required> <br>
+                        <label><b>Pilih yang kamu butuhkan</b></label> <br> 
+                        <div id="wrapper-checkbox">
+                            <input type="checkbox" value="0" name="dibutuhkan"><span><b>HACKER</b></span>
+                            <input type="checkbox" value="1" name="dibutuhkan"><span><b>MARKET</b></span>
+                            <input type="checkbox" value="2" name="dibutuhkan"><span><b>JOBS</b></span>
+                             <br><br>
+                        </div>
+                        <label for="komentar"><b>KOMENTAR</b></label> <br>
+                        <textarea placeholder="Silahkan isi komentar..." id="komentar" required></textarea> <br>
+                        <input type="submit" value="kirim" id="button">
+                    </form>
+                </div>
+            </div>
+            </section>
+        </main>
+        
+    </body>
+
+</html>

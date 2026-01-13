@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dark Web</title>
+        <link rel="website icon" type="jpg" href="image/background6.jpg">
+        
+        <style>
+
+            /*background*/
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #bg1{
+                background-color:black;
+                height:100dvh;
+                width:50dvw; 
+                top:0px;
+                position:absolute;
+                z-index:-2;
+                top:-50px;
+            }
+            #bg2{
+                background-image: url("image/background1.jpg");
+                background-repeat: no-repeat;
+                margin-top: 95px;
+                background-size:100dvw 100dvh;
+                height:100dvh;
+                width:100dvw;
+                position:absolute;
+                z-index:-3;
+            }
+
+            #atas{
+                background-color:rgb(27, 27, 27);
+                height:50px;
+                width:100dvw;
+                position:fixed;
+                z-index: 1000;
+            }
+            #box-bawah{
+                height:350px;
+                width:100dvw;
+                background-color:rgb(0, 0, 0);
+                position:relative;
+                top:-115px;
+                
+            }
+            #dynamic-text{
+                margin-top:80px;
+            }
+            
+
+            /*navigasi*/
+            nav{
+                display:inline-block;
+                margin-left:600px;
+                margin-top:15px;
+                position:fixed;
+                z-index:1000;
+            }
+            .menu{
+                text-decoration: none;
+                color:antiquewhite;
+                border:2 solid rgb(255, 255, 255);
+                padding-right:30px;
+                transition:  1s;
+            }
+            .menu:hover{
+                box-shadow: -2px 5px 5px whitesmoke;
+            }
+
+            /*animasi header awal*/
+            #wrapper{
+                display:flex;
+                margin-left:425px;
+            }
+            #text{
+                color:blueviolet;
+                margin-top:88px;
+                font-size:60px;
+                text-shadow:0px 0px 30px rgb(134, 134, 134);
+            }
+            #wrapper #dynamic-text{
+                height:90px;
+                line-height:90px;
+                overflow: hidden;
+            }
+            #dynamic-text li{
+                list-style:none;
+                color:rgb(255, 45, 45);
+                font-size:60px;
+                position: relative;
+                top:0;
+                animation: slide 12s steps(4) infinite;
+            }
+            @keyframes slide{
+                100%{
+                    top:-360px;
+                }
+            }
+            #dynamic-text li span{
+                position:relative;
+                margin:5px 0;
+                line-height: 90px;
+            }
+            #dynamic-text li span::after{
+                content:'';
+                position:absolute;
+                left:0;
+                height:78px;
+                width:100%;
+                background:rgb(255, 255, 255);
+                border-left:2px solid #000000;
+                animation: typing 3s steps(12) infinite;
+            }
+            @keyframes typing{
+                40%,
+                60%{
+                    left: calc(100% + 30px);
+                }
+                100%{
+                    left:0;
+                }
+            }
+
+
+            video{
+                margin-left:430px;
+                bottom:10px;
+            }
+            
+            h2{
+                color: blue;
+                position: absolute;
+                margin-left:550px;
+                top:750px;
+                font-size:30px;
+                animation-name: warna;
+                animation-duration: 3s;
+                animation-iteration-count:infinite;
+                animation-direction:alternate;
+                animation-delay:1s;
+                animation-timing-function: ease-out;
+                animation-fill-mode: none;
+            }
+            @keyframes warna{
+                0%{color:blue;}
+                25%{color:red;}
+                50%{color:blueviolet;}
+                75%{color:rgb(255, 30, 244);}
+                100%{color:aliceblue;}
+            }
+            h2:hover{
+                animation-play-state:paused;
+            }
+            /*card*/
+            #card1{
+                height:300px;
+                width:200px;
+                border-radius:20px;
+                background-color:rgb(21, 21, 21);
+                position:relative;
+                top:350px;
+                left:250px;
+                transform-style:preserve-3d;
+                border:2px solid white;
+                transition: transform 1.5s;
+            }
+            #card1:hover{
+                transform: rotateY(180deg);
+            }
+            #front1{
+                height:300px;
+                width:200px;
+                position:absolute;
+                background-image: url("image/background2.jpg");
+                border-radius:20px;
+                background-position:47% 40%;
+                background-size:cover;
+                transform:translateZ(20px);
+            }
+            #back1{
+                height:300px;
+                width:200px;
+                position:absolute;
+                border-radius:20px;
+                transform: rotateY(180deg);
+                box-sizing:border-box;
+                padding-top:10px;
+                padding-left:5px;
+                padding-right:5px;
+            }
+            #front1, #back1{
+                backface-visibility: hidden;
+            }
+            .header1{
+                text-align:center;
+                color:rgb(164, 78, 244);
+            }
+            .header2{
+                color:rgb(255, 0, 0);
+            }
+
+
+            #card2{
+                height:300px;
+                width:200px;
+                border-radius:20px;
+                background-color:rgb(21, 21, 21);
+                position:relative;
+                top:48px;
+                left:650px;
+                transform-style:preserve-3d;
+                border:2px solid white;
+                transition: transform 1.5s;
+            }
+            #card2:hover{
+                transform: rotateY(180deg);
+            }
+            #front2{
+                background-image: url(image/background3.webp);
+                height:300px;
+                width:200px;
+                position:absolute;
+                border-radius:20px;
+                box-sizing:border-box;
+                background-position:40% 50%;
+                background-size:90%;
+                transform:translateZ(20px);
+            }
+            #back2{
+                height:300px;
+                width:200px;
+                position:absolute;
+                border-radius:20px;
+                transform: rotateY(180deg);
+                box-sizing:border-box;
+                padding-top:10px;
+                padding-left:5px;
+                padding-right:5px;
+            }
+             #front2, #back2{
+                backface-visibility: hidden;
+            }
+
+
+            #card3{
+                height:300px;
+                width:200px;
+                border-radius:20px;
+                background-color:rgb(21, 21, 21);
+                position:relative;
+                bottom:255px;
+                left:1050px;
+                transform-style:preserve-3d;
+                border:2px solid white;
+                transition: transform 1.5s;
+            }
+            #card3:hover{
+                transform: rotateY(180deg);
+            }
+            #front3{
+                background-image: url(image/background4.jpg);
+                height:300px;
+                width:200px;
+                position:absolute;
+                border-radius:20px;
+                box-sizing:border-box;
+                background-position:50% 60%;
+                background-size:cover;
+                transform:translateZ(20px);
+            }
+            #back3{
+                height:300px;
+                width:200px;
+                position:absolute;
+                border-radius:20px;
+                transform: rotateY(180deg);
+                box-sizing:border-box;
+                padding-top:10px;
+                padding-left:5px;
+                padding-right:5px;
+            }
+             #front3, #back3{
+                backface-visibility: hidden;
+            }
+
+            /*FOOTER*/
+            img{
+                position:relative;
+                bottom:390px;
+                height:30dvh;
+                width:30dvw;
+            }
+            p{
+                color:rgb(222, 255, 255);
+                position:relative;
+                top:-520px;
+                text-align:center;
+                z-index:10;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <div id="atas"></div>
+        <nav>
+            <a href="indeks.html" class="menu">HOME</a>
+            <a href="kontak.html" class="menu">KONTAK</a>
+            <a href="pendaftaran.html" class="menu">PENDAFTARAN</a>
+        </nav>
+
+        <header id="wrapper">
+            <h1 id="text">Hello, welcome to</h1>
+            <ul id="dynamic-text">
+                <li><span>dark web</span></li>
+                <li><span>market</span></li>
+                <li><span>job</span></li>
+                <li><span>HELL</span></li>
+                
+            </ul>
+        </header>
+
+        <main>
+            <article>
+                <section id="bg1"></section>
+
+                <section>
+                    <video loop muted autoplay>
+                        <source src="video/video1.webm" type="video/webm">
+                    </video>
+                </section>
+            </article>
+
+            <article>
+                <Section id="bg2"></Section>
+
+                <section>
+                    <h2>CHOOSE WHAT YOU NEED!</h2>
+                </section>
+                <section>
+                    <div id="card1">
+                        <div id="front1"></div>
+
+                        <div id="back1">
+                            <h3 class="header1">HACKER</h3>
+                            <h4 class="header2">An experienced ethical hacker with strong expertise in web security, specializing in identifying vulnerabilities, improving system defenses, and ensuring web applications remain secure, reliable, and resilient against modern cyber threats.</h4>
+                        </div>
+
+                    </div>
+                    <div id="card2">
+                        <div id="front2"></div>
+
+                        <div id="back2">
+                            <h3 class="header1">DARK MARKET</h3>
+                            <h4 class="header2">Dark Market is a hidden-style online marketplace inspired by the dark web. A place to explore digital markets, services, and opportunities in a secure and minimal environment. No noise. No identity. Only value. Enter the market. Trade in the dark.</h4>
+                        </div>
+                    </div>
+                    <div id="card3">
+                        <div id="front3"></div>
+
+                        <div id="back3">
+                            <h3 class="header1">DARK JOB</h3>
+                            <h4 class="header2">Dark Job Market is a hidden-style platform inspired by the dark web, built to discover jobs and freelance opportunities in a minimal and secure environment. No profiles. No noise. Only skills and results. Find work. Stay unseen. Deliver value.</h4>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+        
+        <footer>
+            <div id="box-bawah"></div>
+            <img src="image/background5.jpg">
+            <p>&copy; DARK WEB</p>
+        </footer>
+    </body>
+</html>
